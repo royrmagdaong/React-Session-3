@@ -11,6 +11,7 @@ const ChildOne = (props) => {
         <div style={{backgroundColor: '#ddd'}}>
             my name is {props.name}
             <br />
+            <p>{props.joke}</p>
             <GrandChildOne greetings={props.greetings} />
         </div>
      );

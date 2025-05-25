@@ -8,6 +8,8 @@ const Parent = () => {
     const [grandChildName1, setGrandChildName1] = useState('doe')
     const [message, setMessage] = useState('')
 
+    const [joke, setJoke] = useState('')
+
     const greetings = (msg) => {
         console.log(msg)
         setMessage(msg)
@@ -22,7 +24,7 @@ const Parent = () => {
         // fetch 3rd party api // synchronous and asynchronous
         // using fetch built in js
         // another way is to use axios
-        
+
         const response = await fetch("https://icanhazdadjoke.com/slack");
         if (!response.ok) {
             console.log('error')
@@ -31,13 +33,15 @@ const Parent = () => {
 
         const json = await response.json();
         console.log(json)
+
+        setJoke(json?.attachments[0].fallback)
     }
     
 
 
     return (
         <div style={{backgroundColor: '#eee'}}>
-            <ChildOne name={name} greetings={greetings} />
+            <ChildOne name={name} greetings={greetings} joke={joke}/>
             <ChildTwo name={name2} nameOfChild={grandChildName1} message={message} />
         </div>
      );
