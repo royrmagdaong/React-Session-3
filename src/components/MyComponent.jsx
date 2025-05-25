@@ -10,6 +10,11 @@ function MyComponent(props){
 
     // setCount(1)
 
+    const handleMouseEnter = () => {
+        console.log('mouse enter')
+        setCount(count + 1)
+    }
+
     return (
         <div>
             {/* <h1>
@@ -18,7 +23,7 @@ function MyComponent(props){
             {/* <h1>
                 hello {props["name"]}
             </h1> */}
-            <div>
+            {/* <div>
                 {count}
                 <br/>
                 <button onClick={()=>{setCount(count + 1)}}>counter</button>
@@ -28,7 +33,9 @@ function MyComponent(props){
                 {count2}
                 <br/>
                 <button onClick={()=>{count2++; console.log(count2)}}>counter 2</button>
-            </div>
+            </div> */}
+
+            <div style={{backgroundColor: "red"}} onMouseEnter={handleMouseEnter}>here {count}</div>
         </div>
     )
 }
