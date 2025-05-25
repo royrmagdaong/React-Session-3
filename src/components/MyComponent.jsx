@@ -35,7 +35,7 @@ function MyComponent(props){
                 <button onClick={()=>{count2++; console.log(count2)}}>counter 2</button>
             </div> */}
 
-            <div style={{backgroundColor: "red"}} onMouseEnter={handleMouseEnter}>here {count}</div>
+            {/* <div style={{backgroundColor: "red"}} onMouseEnter={handleMouseEnter}>here {count}</div> */}
         </div>
     )
 }
