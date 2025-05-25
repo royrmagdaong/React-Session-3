@@ -1,9 +1,17 @@
 // import react from 'react'
 
-function MyComponent(){
+function MyComponent(props){
+
+    // props.name = "John" ERROR - read only
+
     return (
         <div>
-            <h1>My component 1..</h1>
+            {/* <h1>
+                hello {props.name}
+            </h1> */}
+            <h1>
+                hello {props["name"]}
+            </h1>
         </div>
     )
 }
