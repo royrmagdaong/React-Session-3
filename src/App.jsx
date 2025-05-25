@@ -3,6 +3,7 @@ import './App.css'
 import MyComponent from './components/MyComponent'
 import MyComponent2 from './components/my-component-2'
 import Login from './components/login'
+import Parent from './components/parent'
 
 function App() {
   const name="Peter"
@@ -12,7 +13,8 @@ function App() {
       {/* <div>Hello World!!!</div> */}
       {/* <MyComponent name={name} /> */}
       {/* <MyComponent2 name="John" /> */}
-      <Login/>
+      {/* <Login/> */}
+      <Parent />
     </>
   )
 }
